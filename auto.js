@@ -25,3 +25,4 @@ document.getElementById('telefono').addEventListener('input', function () {
         this.value = this.value.slice(0, 10);
     }
 });
+

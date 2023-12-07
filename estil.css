@@ -136,6 +136,10 @@ input[type="submit"]:hover {
     background-color: #45a049;
 }
 
+input[type="reset"]:hover {
+    background-color: #45a049;
+}
+
 .section {
     background-color: #f7f7f7;
     padding: 20px;

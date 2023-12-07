@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>  <h1>  AUTO FERNI  </h1> </title>
+  <title>  Auto FERNI </title>
   <link rel="stylesheet" href="estil.css">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -32,36 +32,49 @@
  
   <div class="container">
     <img src="https://autolasa.com.ec/uploads/images/787x530home-656fa7d503d85213022640.jpg" alt="Descripción de la imagen" width="850" height="600">
-    <form id="formulario">
+    <form id="formulario" onsubmit="return validarFormulario()">
       <img src="https://www.grupopaola.com/wp-content/uploads/2021/10/Boton_01.gif" alt="Descripción de la imagen" width="300" height="90">
-       <label for="nombre">Nombre:</label>
-       <input type="text" id="nombre" name="nombre" required>
-     
-       <label for="apellido">Apellido:</label>
-       <input type="text" id="apellido" name="apellido" required>
-     
-       <label for="telefono">Número de teléfono:</label>
-       <input type="tel" id="telefono" name="telefono" maxlength="10" pattern="[0-9]+" required>
-     
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+      
+      <label for="apellido">Apellido:</label>
+      <input type="text" id="apellido" name="apellido" required>
+      
+      <label for="telefono">Número de teléfono:</label>
+      <input type="tel" id="telefono" name="telefono" maxlength="10" pattern="[0-9]+" required>
+      
       <label for="correo">Correo electrónico:</label>
       <input type="email" id="correo" name="correo" required>
-     
-       <label for="marca">:elige una marca</label>
-       <select id="marca" name="marca" required>
-         <option value="masda">Mazda</option>
-         <option value="kia">Kia</option>
-         <option value="cherry">Chery</option>
-       </select>
-     
-       <label for="plazo">Plazo:</label>
-       <select id="plazo" name="plazo" required>
-         <option value="12meses">12 meses</option>
-         <option value="18meses">18 meses</option>
-         <option value="25meses">25 meses</option>
-       </select>
-     
-       <input type="submit" value="Enviar" id="enviar">
+      
+      <label for="marca">Elige una marca:</label>
+      <select id="marca" name="marca" required>
+        <option value="masda">Mazda</option>
+        <option value="kia">Kia</option>
+        <option value="cherry">Chery</option>
+      </select>
+      
+      <label for="plazo">Plazo:</label>
+      <select id="plazo" name="plazo" required>
+        <option value="12meses">12 meses</option>
+        <option value="18meses">18 meses</option>
+        <option value="25meses">25 meses</option>
+      </select>
+      
+      <input type="submit" value="Enviar" id="enviar">
+      <input type="reset" value="Restablecer">
     </form>
+    
+    <script>
+      function validarFormulario() {
+        // Puedes agregar aquí la lógica de validación si es necesario
+    
+        // Mostrar mensaje de éxito
+        alert("Formulario llenado con éxito");
+    
+        // Devolver false para prevenir el envío normal del formulario
+        return false;
+      }
+    </script>
    </div>
    <style>
     hr {
